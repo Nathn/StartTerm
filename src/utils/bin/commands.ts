@@ -17,78 +17,245 @@ export const help = async (args: string[]): Promise<string> => {
   return `Welcome! Here are all the available commands:
 \n${c}\n
 [tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+[ctrl+l]/clear: clear terminal.
 `;
 };
 
-// Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Opening Github repository...';
+export const o = async (args: string[]): Promise<void> => {
+  if (args.length !== 0) {
+    var url = args.join(' ')
+    if (!url.match(/^https?:\/\//i)) {
+        url = 'http://' + url;
+    }
+    window.open(url, "_self");
+  }
 };
 
-// About
-export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+export const mail = async (args: string[]): Promise<void> => {
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Opening resume...';
+export const email = async (args: string[]): Promise<void> => {
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
 };
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
+export const gmail = async (args: string[]): Promise<void> => {
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
 };
 
-// Contact
-export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+export const gm = async (args: string[]): Promise<void> => {
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
 };
 
-export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
-
-  return 'Opening github...';
+export const outlook = async (args: string[]): Promise<void> => {
+  window.open(`https://outlook.office365.com/mail/`, "_self");
 };
 
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+export const ol = async (args: string[]): Promise<void> => {
+  window.open(`https://outlook.office365.com/mail/`, "_self");
+};
 
-  return 'Opening linkedin...';
+export const wolfy = async (args: string[]): Promise<void> => {
+  window.open(`https://wolfy.net/play`, "_self");
+};
+
+export const jklm = async (args: string[]): Promise<void> => {
+  window.open(`https://jklm.fun/`, "_self");
+};
+
+export const squiz = async (args: string[]): Promise<void> => {
+  window.open(`https://squiz.gg/`, "_self");
+};
+
+export const squizz = async (args: string[]): Promise<void> => {
+  window.open(`https://squiz.gg/`, "_self");
+};
+
+export const epitech = async (args: string[]): Promise<void> => {
+  window.open(`https://intra.epitech.eu/`, "_self");
+};
+
+export const intra = async (args: string[]): Promise<void> => {
+  window.open(`https://intra.epitech.eu/`, "_self");
+};
+
+export const planning = async (args: string[]): Promise<void> => {
+  window.open(`https://intra.epitech.eu/planning/#!/`, "_self");
+};
+
+export const logtime = async (args: string[]): Promise<void> => {
+  window.open(`https://intra.epitech.eu/user/#!/netsoul`, "_self");
+};
+
+export const delivery = async (args: string[]): Promise<void> => {
+  window.open(`https://github.com/EpitechPromo2026`, "_self");
+};
+
+export const del = async (args: string[]): Promise<void> => {
+  window.open(`https://github.com/EpitechPromo2026`, "_self");
+};
+
+export const my = async (args: string[]): Promise<void> => {
+  window.open(`https://my.epitech.eu/index.html#y/`, "_self");
+};
+
+export const trad = async (args: string[]): Promise<void> => {
+  window.open(`https://translate.google.com/`, "_self");
 };
 
 // Search
-export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
+
+export const github = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://github.com/`, "_self");
+  } else {
+    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self");
+  }
 };
 
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
+export const gh = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://github.com/`, "_self");
+  } else {
+    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self");
+  }
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
+export const linkedin = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://www.linkedin.com/`, "_self");
+  } else {
+    window.open(`https://www.linkedin.com/search/results/all/?keywords=${args.join(' ')}/`, "_self");
+  }
 };
 
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
+export const google = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://google.com/`, "_self");
+  } else {
+    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const g = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://google.com/`, "_self");
+  } else {
+    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const duckduckgo = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://duckduckgo.com/`, "_self");
+  } else {
+    window.open(`https://duckduckgo.com/?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const bing = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://bing.com/`, "_self");
+  } else {
+    window.open(`https://bing.com/search?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const reddit = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://www.reddit.com/`, "_self");
+  } else {
+    window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const youtube = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://youtube.com/`, "_self");
+  } else {
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+  }
+};
+
+export const yt = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://youtube.com/`, "_self");
+  } else {
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+  }
+};
+
+export const ytb = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://youtube.com/`, "_self");
+  } else {
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+  }
+};
+
+
+export const maps = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://www.google.com/maps`, "_self");
+  } else {
+    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const m = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://www.google.com/maps`, "_self");
+  } else {
+    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self");
+  }
+};
+
+export const wikipedia = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self");
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self");
+      } else {
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+      }
+    } else {
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+    }
+  }
+};
+
+export const wiki = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self");
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self");
+      } else {
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+      }
+    } else {
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+    }
+  }
+};
+
+export const w = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self");
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self");
+      } else {
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+      }
+    } else {
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+    }
+  }
 };
 
 // Typical linux commands
@@ -100,58 +267,29 @@ export const whoami = async (args: string[]): Promise<string> => {
   return `${config.ps1_username}`;
 };
 
-export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
-};
-
-export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
-};
-
 export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+export const time = async (args: string[]): Promise<string> => {
+  return new Date().toString();
 };
 
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
-export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+export const datetime = async (args: string[]): Promise<string> => {
+  return new Date().toString();
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+  ███████████  ███                     ███████████
+  ░░███░░░░░░█ ░░░                     ░░███░░░░░░█
+   ░███   █ ░  ████  ████████   ██████  ░███   █ ░   ██████  █████ █████
+   ░███████   ░░███ ░░███░░███ ███░░███ ░███████    ███░░███░░███ ░░███
+   ░███░░░█    ░███  ░███ ░░░ ░███████  ░███░░░█   ░███ ░███ ░░░█████░
+   ░███  ░     ░███  ░███     ░███░░░   ░███  ░    ░███ ░███  ███░░░███
+   █████       █████ █████    ░░██████  █████      ░░██████  █████ █████
+  ░░░░░       ░░░░░ ░░░░░      ░░░░░░  ░░░░░        ░░░░░░  ░░░░░ ░░░░░
 
-Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;
 };
