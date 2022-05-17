@@ -21,239 +21,229 @@ export const help = async (args: string[]): Promise<string> => {
 `;
 };
 
-export const o = async (args: string[]): Promise<void> => {
-  if (args.length !== 0) {
-    var url = args.join(' ')
-    if (!url.match(/^https?:\/\//i)) {
-        url = 'http://' + url;
-    }
-    window.open(url, "_self");
-  }
-};
-
 export const mail = async (args: string[]): Promise<void> => {
-  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self").focus();
 };
 
 export const email = async (args: string[]): Promise<void> => {
-  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self").focus();
 };
 
 export const gmail = async (args: string[]): Promise<void> => {
-  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self").focus();
 };
 
 export const gm = async (args: string[]): Promise<void> => {
-  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self");
+  window.open(`https://mail.google.com/mail/u/0/#inbox`, "_self").focus();
 };
 
 export const outlook = async (args: string[]): Promise<void> => {
-  window.open(`https://outlook.office365.com/mail/`, "_self");
+  window.open(`https://outlook.office365.com/mail/`, "_self").focus();
 };
 
 export const ol = async (args: string[]): Promise<void> => {
-  window.open(`https://outlook.office365.com/mail/`, "_self");
+  window.open(`https://outlook.office365.com/mail/`, "_self").focus();
 };
 
 export const wolfy = async (args: string[]): Promise<void> => {
-  window.open(`https://wolfy.net/play`, "_self");
+  window.open(`https://wolfy.net/play`, "_self").focus();
 };
 
 export const jklm = async (args: string[]): Promise<void> => {
-  window.open(`https://jklm.fun/`, "_self");
+  window.open(`https://jklm.fun/`, "_self").focus();
 };
 
 export const squiz = async (args: string[]): Promise<void> => {
-  window.open(`https://squiz.gg/`, "_self");
+  window.open(`https://squiz.gg/`, "_self").focus();
 };
 
 export const squizz = async (args: string[]): Promise<void> => {
-  window.open(`https://squiz.gg/`, "_self");
+  window.open(`https://squiz.gg/`, "_self").focus();
 };
 
 export const epitech = async (args: string[]): Promise<void> => {
-  window.open(`https://intra.epitech.eu/`, "_self");
+  window.open(`https://intra.epitech.eu/`, "_self").focus();
 };
 
 export const intra = async (args: string[]): Promise<void> => {
-  window.open(`https://intra.epitech.eu/`, "_self");
+  window.open(`https://intra.epitech.eu/`, "_self").focus();
 };
 
 export const planning = async (args: string[]): Promise<void> => {
-  window.open(`https://intra.epitech.eu/planning/#!/`, "_self");
+  window.open(`https://intra.epitech.eu/planning/#!/`, "_self").focus();
 };
 
 export const logtime = async (args: string[]): Promise<void> => {
-  window.open(`https://intra.epitech.eu/user/#!/netsoul`, "_self");
+  window.open(`https://intra.epitech.eu/user/#!/netsoul`, "_self").focus();
 };
 
 export const delivery = async (args: string[]): Promise<void> => {
-  window.open(`https://github.com/EpitechPromo2026`, "_self");
+  window.open(`https://github.com/EpitechPromo2026`, "_self").focus();
 };
 
 export const del = async (args: string[]): Promise<void> => {
-  window.open(`https://github.com/EpitechPromo2026`, "_self");
+  window.open(`https://github.com/EpitechPromo2026`, "_self").focus();
 };
 
 export const my = async (args: string[]): Promise<void> => {
-  window.open(`https://my.epitech.eu/index.html#y/`, "_self");
+  window.open(`https://my.epitech.eu/index.html#y/`, "_self").focus();
 };
 
 export const trad = async (args: string[]): Promise<void> => {
-  window.open(`https://translate.google.com/`, "_self");
+  window.open(`https://translate.google.com/`, "_self").focus();
 };
 
 // Search
 
 export const github = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://github.com/`, "_self");
+    window.open(`https://github.com/`, "_self").focus();
   } else {
-    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self");
+    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const gh = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://github.com/`, "_self");
+    window.open(`https://github.com/`, "_self").focus();
   } else {
-    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self");
+    window.open(`https://github.com/search?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const linkedin = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://www.linkedin.com/`, "_self");
+    window.open(`https://www.linkedin.com/`, "_self").focus();
   } else {
-    window.open(`https://www.linkedin.com/search/results/all/?keywords=${args.join(' ')}/`, "_self");
+    window.open(`https://www.linkedin.com/search/results/all/?keywords=${args.join(' ')}/`, "_self").focus();
   }
 };
 
 export const google = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://google.com/`, "_self");
+    window.open(`https://google.com/`, "_self").focus();
   } else {
-    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self");
+    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const g = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://google.com/`, "_self");
+    window.open(`https://google.com/`, "_self").focus();
   } else {
-    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self");
+    window.open(`https://google.com/search?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const duckduckgo = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://duckduckgo.com/`, "_self");
+    window.open(`https://duckduckgo.com/`, "_self").focus();
   } else {
-    window.open(`https://duckduckgo.com/?q=${args.join(' ')}`, "_self");
+    window.open(`https://duckduckgo.com/?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const bing = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://bing.com/`, "_self");
+    window.open(`https://bing.com/`, "_self").focus();
   } else {
-    window.open(`https://bing.com/search?q=${args.join(' ')}`, "_self");
+    window.open(`https://bing.com/search?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const reddit = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://www.reddit.com/`, "_self");
+    window.open(`https://www.reddit.com/`, "_self").focus();
   } else {
-    window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`, "_self");
+    window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const youtube = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://youtube.com/`, "_self");
+    window.open(`https://youtube.com/`, "_self").focus();
   } else {
-    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const yt = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://youtube.com/`, "_self");
+    window.open(`https://youtube.com/`, "_self").focus();
   } else {
-    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const ytb = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://youtube.com/`, "_self");
+    window.open(`https://youtube.com/`, "_self").focus();
   } else {
-    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self");
+    window.open(`https://youtube.com/results?search_query=${args.join(' ')}`, "_self").focus();
   }
 };
 
 
 export const maps = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://www.google.com/maps`, "_self");
+    window.open(`https://www.google.com/maps`, "_self").focus();
   } else {
-    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self");
+    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const m = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://www.google.com/maps`, "_self");
+    window.open(`https://www.google.com/maps`, "_self").focus();
   } else {
-    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self");
+    window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self").focus();
   }
 };
 
 export const wikipedia = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self");
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
   } else {
     if (args[0] == "en") {
       if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self");
+        window.open(`https://en.wikipedia.org`, "_self").focus();
       } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
       }
     } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
     }
   }
 };
 
 export const wiki = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self");
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
   } else {
     if (args[0] == "en") {
       if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self");
+        window.open(`https://en.wikipedia.org`, "_self").focus();
       } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
       }
     } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
     }
   }
 };
 
 export const w = async (args: string[]): Promise<void> => {
   if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self");
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
   } else {
     if (args[0] == "en") {
       if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self");
+        window.open(`https://en.wikipedia.org`, "_self").focus();
       } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self");
+        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
       }
     } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self");
+      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
     }
   }
 };

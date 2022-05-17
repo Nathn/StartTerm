@@ -9,18 +9,20 @@ export const quote = async (args: string[]): Promise<string> => {
 };
 
 export const weather = async (args: string[]): Promise<string> => {
-  const city = args.join('+');
+  var city = args.join('+');
+  city = city.charAt(0).toUpperCase() + city.slice(1);
   if (!city) {
-    return 'Usage: weather [city]. Example: weather paris';
+    city = 'Nice';
   }
   const weather = await getWeather(city);
   return weather;
 };
 
 export const meteo = async (args: string[]): Promise<string> => {
-  const city = args.join('+');
+  var city = args.join('+');
+  city = city.charAt(0).toUpperCase() + city.slice(1);
   if (!city) {
-    return 'Usage: meteo [city]. Example: meteo paris';
+    city = 'Nice';
   }
   const weather = await getWeather(city);
   return weather;
