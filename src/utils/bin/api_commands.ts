@@ -27,3 +27,63 @@ export const meteo = async (args: string[]): Promise<string> => {
   const weather = await getWeather(city);
   return weather;
 };
+
+export const wikipedia = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self").focus();
+      } else {
+        fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+          window.open(`https://en.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+        });
+      }
+    } else {
+      fetch(`https://fr.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+        window.open(`https://fr.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+      });
+    }
+  }
+};
+
+export const wiki = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self").focus();
+      } else {
+        fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+          window.open(`https://en.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+        });
+      }
+    } else {
+      fetch(`https://fr.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+        window.open(`https://fr.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+      });
+    }
+  }
+};
+
+export const w = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://fr.wikipedia.org`, "_self").focus();
+  } else {
+    if (args[0] == "en") {
+      if (args.length === 1) {
+        window.open(`https://en.wikipedia.org`, "_self").focus();
+      } else {
+        fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+          window.open(`https://en.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+        });
+      }
+    } else {
+      fetch(`https://fr.wikipedia.org/w/api.php?action=opensearch&search=${args.join('+')}&format=json&origin=*`).then(response => response.json()).then(data => {
+        window.open(`https://fr.wikipedia.org/wiki/${data[1][0]}`, "_self").focus();
+      });
+    }
+  }
+};

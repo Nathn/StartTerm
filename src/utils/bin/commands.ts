@@ -93,6 +93,14 @@ export const trad = async (args: string[]): Promise<void> => {
   window.open(`https://translate.google.com/`, "_self").focus();
 };
 
+export const sutom = async (args: string[]): Promise<void> => {
+  window.open(`https://sutom.nocle.fr/`, "_self").focus();
+};
+
+export const tusmo = async (args: string[]): Promise<void> => {
+  window.open(`http://www.tusmo.xyz`, "_self").focus();
+};
+
 // Search
 
 export const github = async (args: string[]): Promise<void> => {
@@ -197,54 +205,6 @@ export const m = async (args: string[]): Promise<void> => {
     window.open(`https://www.google.com/maps`, "_self").focus();
   } else {
     window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self").focus();
-  }
-};
-
-export const wikipedia = async (args: string[]): Promise<void> => {
-  if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self").focus();
-  } else {
-    if (args[0] == "en") {
-      if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self").focus();
-      } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
-      }
-    } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
-    }
-  }
-};
-
-export const wiki = async (args: string[]): Promise<void> => {
-  if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self").focus();
-  } else {
-    if (args[0] == "en") {
-      if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self").focus();
-      } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
-      }
-    } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
-    }
-  }
-};
-
-export const w = async (args: string[]): Promise<void> => {
-  if (args.length === 0) {
-    window.open(`https://fr.wikipedia.org`, "_self").focus();
-  } else {
-    if (args[0] == "en") {
-      if (args.length === 1) {
-        window.open(`https://en.wikipedia.org`, "_self").focus();
-      } else {
-        window.open(`https://en.wikipedia.org/wiki/${args.slice(1).join('_')}`, "_self").focus();
-      }
-    } else {
-      window.open(`https://fr.wikipedia.org/wiki/${args.join('_')}`, "_self").focus();
-    }
   }
 };
 
