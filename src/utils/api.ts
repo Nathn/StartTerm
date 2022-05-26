@@ -1,9 +1,9 @@
 import axios from 'axios';
 import config from '../../config.json';
 
-export const getWeather = async (city: string) => {
+export const getWeather = async (city: string, lang: string) => {
   try {
-    const { data } = await axios.get(`https://wttr.in/${city}?ATm&lang=fr`);
+    const { data } = await axios.get(`https://wttr.in/${city}?ATm&lang=${lang}`);
     return data;
   } catch (error) {
     return error;

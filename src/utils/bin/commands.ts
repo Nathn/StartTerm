@@ -101,6 +101,14 @@ export const tusmo = async (args: string[]): Promise<void> => {
   window.open(`http://www.tusmo.xyz`, "_self").focus();
 };
 
+export const dcode = async (args: string[]): Promise<void> => {
+  window.open(`https://www.dcode.fr/recherche-mot`, "_self").focus();
+};
+
+export const paypal = async (args: string[]): Promise<void> => {
+  window.open(`https://www.paypal.com/myaccount/summary`, "_self").focus();
+};
+
 // Search
 
 export const github = async (args: string[]): Promise<void> => {
@@ -207,6 +215,39 @@ export const m = async (args: string[]): Promise<void> => {
     window.open(`https://www.google.com/maps?q=${args.join(' ')}`, "_self").focus();
   }
 };
+
+export const twitter = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://twitter.com/`, "_self").focus();
+  } else {
+    window.open(`https://twitter.com/search?q=${args.join(' ')}`, "_self").focus();
+  }
+};
+
+export const tr = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://twitter.com/`, "_self").focus();
+  } else {
+    window.open(`https://twitter.com/search?q=${args.join(' ')}`, "_self").focus();
+  }
+};
+
+export const twitch = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://twitch.tv/`, "_self").focus();
+  } else {
+    window.open(`https://twitch.tv/search?term=${args.join(' ')}`, "_self").focus();
+  }
+};
+
+export const tc = async (args: string[]): Promise<void> => {
+  if (args.length === 0) {
+    window.open(`https://twitch.tv/`, "_self").focus();
+  } else {
+    window.open(`https://twitch.tv/search?term=${args.join(' ')}`, "_self").focus();
+  }
+};
+
 
 // Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
